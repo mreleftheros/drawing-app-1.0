@@ -2,10 +2,22 @@ const swatchesDiv = document.getElementById("swatches");
 
 const chooseColor = e => {
   //grab the color from the swatch
-  const color = e.target.style.backgroundColor;
+  if(e.target.classList.contains("swatch")) {
+    const color = e.target.style.backgroundColor;
   
-  ctx.fillStyle = color;
-  ctx.strokeStyle = color;
+    ctx.fillStyle = color;
+    ctx.strokeStyle = color;
+
+    //remove previous active class
+    const swatches = swatchesDiv.children;
+    for(let swatch of swatches) {
+      if(swatch.classList.contains("active"))
+        swatch.classList.remove("active");
+    }
+
+    //add active class
+    e.target.classList.add("active");
+  }
 }
 
 const createSwatch = color => {

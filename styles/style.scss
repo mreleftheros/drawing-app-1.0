@@ -50,10 +50,12 @@
       width: 1rem;
       height: 1rem;
       border-radius: 50%;
+      margin: .1rem;
     }
 
     .active {
-      border: white solid;
+      border: white solid 2px;
+      box-shadow: 1px 1px 3px #111;
     }
   }
 
