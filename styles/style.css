@@ -1,0 +1,48 @@
+hmtl {
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+}
+
+#canvas {
+  display: block;
+  background-color: #fff;
+}
+
+#toolbar {
+  min-width: 10vw;
+  padding: 0.5rem;
+  position: fixed;
+  height: 100%;
+  background: #ccc;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tool {
+  max-width: 80%;
+  background: #ddd;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+.tool label {
+  display: block;
+  max-width: 100%;
+}
+.tool input {
+  display: block;
+  max-width: 100%;
+}/*# sourceMappingURL=style.css.map */

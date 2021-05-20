@@ -5,12 +5,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Drawing App</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles/style.css">
   <link rel="shortcut icon" href="#" type="image/x-icon">
 </head>
 <body>
+  <div id="toolbar">
+    <div class="tool">
+      <label for="brushSize">Brush Size</label>
+      <input type="number" min="5" max="20" step="5" value="5" id="brushSize">
+    </div>
+  </div>
+
   <canvas id="canvas">Draw Here</canvas>
 
   <script src="scripts/canvas.js"></script>
+  <script src="scripts/toolbox.js"></script>
 </body>
 </html>

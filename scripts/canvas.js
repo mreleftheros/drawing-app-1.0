@@ -2,23 +2,23 @@ const canvas = document.getElementById("canvas");
 canvas.width = innerWidth;
 canvas.height = innerHeight;
 const ctx = canvas.getContext("2d");
-let radius = 10;
+let radius = 5;
 ctx.lineWidth = 2 * radius;
-let isClicked = false;
+let isDrawing = false;
 
 //function to check event type and set isClicked value
 const checkEventType = e => {
   if(e.type === "mousedown")
-    isClicked = true;
+    isDrawing = true;
   else if(e.type === "mouseup")
-    isClicked = false;
+    isDrawing = false;
 };
 
 //function to draw
 const putPoint = e => {
   checkEventType(e);
 
-  if(isClicked) {
+  if(isDrawing) {
     ctx.lineTo(e.x, e.y);
     ctx.stroke();
     ctx.beginPath();
