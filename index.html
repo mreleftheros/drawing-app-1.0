@@ -10,15 +10,21 @@
 </head>
 <body>
   <div id="toolbar">
-    <div class="tool">
+    <div class="tool brushes" id="brushes">
       <label for="brushSize">Brush Size</label>
       <input type="number" min="5" max="20" step="5" value="5" id="brushSize">
+    </div>
+
+    <div class="tool swatches">
+      <h3>Swatches</h3>
+      <div id="swatches" class="palette"></div>
     </div>
   </div>
 
   <canvas id="canvas">Draw Here</canvas>
 
   <script src="scripts/canvas.js"></script>
-  <script src="scripts/toolbox.js"></script>
+  <script src="scripts/brushes.js"></script>
+  <script src="scripts/swatches.js"></script>
 </body>
 </html>
